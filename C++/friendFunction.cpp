@@ -14,7 +14,7 @@ public:
     std::cout << "Enter your balance :" << '\n';
     std::cin >> acbal;
   }
-  friend void frand(account);//friend function prototype
+  friend void frand(account);//friend function prototype && friend function accepts only objects as arguementsn
 };
 void frand(account b1){
   std::cout << "Account Number: "<<b1.acno<<" by name "<<b1.name<<" has balance of "<<b1.acbal<<" rupees"<<'\n';

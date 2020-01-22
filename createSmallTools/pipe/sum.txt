@@ -1,0 +1,5 @@
+Sum is: 25
+Sum is: 30
+Sum is: 33
+Sum is: 26
+Sum is: 31

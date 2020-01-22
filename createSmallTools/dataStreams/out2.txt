@@ -1,0 +1,6 @@
+Sum is: 40
+Sum is: 42
+Sum is: 44
+Sum is: 46
+Sum is: 48
+Sum is: 50

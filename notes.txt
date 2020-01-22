@@ -1,0 +1,42 @@
+int **pointer2
+creates a pointer variable which points to another pointer variable.
+
+If an array is called in the local scope i.e in the function in which it is  created it is passed as an array but if it is passed as an argument to another function it gets  passed as a pointer to its index 0 value.
+see program c.c for more info.
+
+void display(char msg[]){
+printf("%d",*(msg+1));
+}
+This  prints the ascii value for the character
+stored in the index 1 of  array passed.
+msg is treated as a pointer as it is passed as an arguement. so when we dereference a pointer a pointer it gives the value stored at the address. As the *(msg+1) returns a int which is nothing but ascii value to the character stored in the array it is implied that the arrays stores characters in the form of ascii value. (of course)
+
+How to print int array??
+
+------------------------------(chapter3)CreateSmallTools--------------------------------------------------
+int a=47;
+fprintf(pointer to a output data stream,"hello agent %d",a); //printf function calls fprintf in the backgrround.
+
+fscanf(pointer to a input stream,"%d",&a); // scanf function calls fscanf in background
+
+ fopen(pointerToDataStream,"r or w or a") //fopen is for opening a stream..three modes:read write append
+
+scanf("%s[^\n]",lines) // takes input and stores it in lines unitl a new line or an enter is pressed
+
+whenever we try to print a character with %d print format  it prints ascii values
+
+./exec <"in.txt" >"out.txt" 2>"error.txt"     //command arguements for redirecting stdin/out/err
+
+FILE *in=fopen("in.txt" ,"r/w/a"); //creates a data stream
+
+ps -ae //lists pid processes
+
+tail -f fileName //displays files data in realtime
+-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
+
+
+--------------------------------(chapter4)BreakItDownbuildItUp---------------------------------------
+
+if a function returning int value is created after the main function but called in the main function before the code will compile though with a warning.
+The compiler assumes that the unheard function returns an int and if the function really returns an int then the two  functions (first: the compiler assumes,second:the really created one) are treated as same.
+But if the  return type of the function is not int then the code will not compile and will result in an error because there will be a conflicting type of function.first:the compiler's assumed function will return an int and second: the really created one returns suppose float . these two functions are treated different and hence conflicting type error occurs of functions having the same name.

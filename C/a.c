@@ -1,11 +1,12 @@
 #include<stdio.h>
-int func(int lon){
-int a=lon;
-return a;
-}
-int main()
-{
-func(3);
-int x=func(3);
-printf("%d",x);
+
+int main(int argc, char const *argv[]) {
+  int arr[1]={5};
+  int *p=arr;
+int *b=p;
+int *c=p;
+*p=10;
+printf("%d\n",*b );
+printf("%d\n",*c );
+  return 0;
 }

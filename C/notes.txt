@@ -40,3 +40,23 @@ tail -f fileName //displays files data in realtime
 if a function returning int value is created after the main function but called in the main function before the code will compile though with a warning.
 The compiler assumes that the unheard function returns an int and if the function really returns an int then the two  functions (first: the compiler assumes,second:the really created one) are treated as same.
 But if the  return type of the function is not int then the code will not compile and will result in an error because there will be a conflicting type of function.first:the compiler's assumed function will return an int and second: the really created one returns suppose float . these two functions are treated different and hence conflicting type error occurs of functions having the same name.
+
+
+------------------------------------------StructsUnions&BitFields------------------------------------------
+structs are used to create datatypes
+structs do not use memory until intialized
+unions can hold different data types at one location
+union un1{
+int age;
+char a[10]
+};
+if an int is assigned to the age var the array a stores the int in bit format ..check unionBits.c
+enum lets u create a set of symbols
+BitFields gives u control over the exact no. of bits stored in the struct.
+a->b  a is a pointer to a struct and b is a field in the struct.
+a->b = *(a).b!=*(a.b)
+typedef lets u create alias.
+
+
+
+
